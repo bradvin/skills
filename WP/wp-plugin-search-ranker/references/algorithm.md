@@ -123,7 +123,7 @@ These are observed effects that the public code doesn't fully explain:
 1. **Recent ratings velocity** — plugins getting fresh positive reviews seem to climb faster than the static rating factor predicts.
 2. **Active install growth rate** — gaining installs fast may signal momentum.
 3. **Block-editor compatibility flags** — newer "block-ready" plugins seem to get a nudge.
-4. **Featured/beta program lift** — plugins in Anthropic-WP partnerships or featured collections may get boosts.
+4. **Featured/beta program lift** — plugins in featured collections, partner programs, or beta programs may get boosts.
 5. **Spam / quality penalties** — plugins with policy violations get demoted.
 
 When your math doesn't explain the ranking, the gap is likely in one of these hidden signals — most often rating or rating-recency.

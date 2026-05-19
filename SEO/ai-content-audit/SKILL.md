@@ -5,7 +5,7 @@ description: Audit web pages or text content for the 7 critical AI content SEO i
 
 # AI Content SEO Audit Skill
 
-Audits a web page or block of text against 7 critical AI content issues that cause poor search rankings (based on the Noel Ceta framework). Produces a detailed before/after audit report as a styled HTML file.
+Audits a web page or block of text against the seven critical AI content issues defined below. Produces a detailed before/after audit report as a styled HTML file.
 
 ## Input Handling
 

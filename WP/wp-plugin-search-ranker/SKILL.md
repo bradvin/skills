@@ -106,7 +106,7 @@ Output format: **inline conversational analysis, not a report**. Match the tone 
 4. **Action list** — ranked by impact, with effort estimates. Each item should be concrete enough that the user can act on it without further questions.
 5. **What not to do** — explicitly call out things that look like good ideas but aren't (e.g. "don't stuff more of the term into your description — you're already at saturation").
 
-Use markdown sparingly: headers, one comparison table, and prose. No bullet-point soup. Match the style of the gallery/lightbox analyses in the conversation history.
+Use markdown sparingly: headers, one comparison table, and prose. No bullet-point soup. Keep the style concise, specific, and evidence-led.
 
 ## Things to watch for
 
