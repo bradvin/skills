@@ -16,12 +16,12 @@ The user will provide ONE of:
 ### If the input is a URL:
 
 1. Use `web_fetch` to retrieve the page content as markdown
-2. Save the raw scraped content to `/home/claude/scraped-content.md`
+2. Save the raw scraped content to a writable workspace file such as `.skill-state/ai-content-audit/scraped-content.md`
 3. Proceed to the audit
 
 ### If the input is text:
 
-1. Save the provided text to `/home/claude/scraped-content.md`
+1. Save the provided text to a writable workspace file such as `.skill-state/ai-content-audit/scraped-content.md`
 2. Proceed to the audit
 
 ## The 7-Issue Audit Framework
@@ -186,7 +186,7 @@ Score each issue from 1 (severe problem) to 5 (no issues found). For each issue,
 
 ## Output: HTML Audit Report
 
-Generate a single, self-contained HTML file styled as a professional audit report. Save it to `/home/claude/ai-content-audit-report.html` then copy to `/mnt/user-data/outputs/ai-content-audit-report.html`.
+Generate a single, self-contained HTML file styled as a professional audit report. Save it to a user-visible workspace path such as `outputs/ai-content-audit-report.html`.
 
 ### Report Structure
 

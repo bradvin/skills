@@ -19,8 +19,8 @@ Analyzes a website page by comparing its actual content against the GSC queries 
 ## Defaults
 
 - **GSC site URL**: The verified property for the submitted site, inferred from the URL when possible or supplied by the user.
-- **Audit history file**: `/home/claude/content-gap-audits.json`
-- **Report output**: `/mnt/user-data/outputs/content-gap-report.html`
+- **Audit history file**: `.skill-state/content-gap-audits.json`
+- **Report output**: `outputs/content-gap-report.html`
 
 ## Workflow
 
@@ -30,7 +30,7 @@ Analyzes a website page by comparing its actual content against the GSC queries 
 
 **If no URL is provided**, auto-pick the best candidate:
 
-1. Load the audit history from `/home/claude/content-gap-audits.json` (create it as `{"audits":[]}` if it doesn't exist)
+1. Load the audit history from `.skill-state/content-gap-audits.json` (create it as `{"audits":[]}` if it doesn't exist)
 2. Query GSC for the top 50 pages by clicks over the last 90 days:
    - `gsc_query_search_analytics` with dimensions `["page"]`, row_limit 50, date range = last 90 days
 3. Filter out pages that were audited in the last 30 days (check audit history)
@@ -113,11 +113,11 @@ Sort both lists by priority score descending.
 
 ### Step 7: Generate the HTML report
 
-Generate a single self-contained HTML file following the report specification in the next section. Save to `/home/claude/content-gap-report.html`, then copy to `/mnt/user-data/outputs/content-gap-report.html`.
+Generate a single self-contained HTML file following the report specification in the next section. Save it to a user-visible workspace path such as `outputs/content-gap-report.html`.
 
 ### Step 8: Update the audit history
 
-Append an entry to `/home/claude/content-gap-audits.json`:
+Append an entry to `.skill-state/content-gap-audits.json`:
 
 ```json
 {
