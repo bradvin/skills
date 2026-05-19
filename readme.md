@@ -11,7 +11,7 @@ Each skill lives in its own directory and is defined by a `SKILL.md` file with f
 | Skill | Path | Purpose |
 | --- | --- | --- |
 | AI Content Audit | [`SEO/ai-content-audit/SKILL.md`](./SEO/ai-content-audit/SKILL.md) | Audits a page or text block against seven AI-content SEO issues and produces a styled HTML audit report. |
-| Content Gap Finder | [`SEO/content-gap-finder/SKILL.md`](./SEO/content-gap-finder/SKILL.md) | Compares a fooplugins.com page against Google Search Console query data to find section additions and new page opportunities. |
+| Content Gap Finder | [`SEO/content-gap-finder/SKILL.md`](./SEO/content-gap-finder/SKILL.md) | Compares a website page against Google Search Console query data to find section additions and new page opportunities. |
 | SEO Title Optimizer | [`SEO/seo-title-optimizer/SKILL.md`](./SEO/seo-title-optimizer/SKILL.md) | Uses page, GSC, DataForSEO, and SERP data to recommend title tags, H1s, and meta descriptions. |
 
 ### UI

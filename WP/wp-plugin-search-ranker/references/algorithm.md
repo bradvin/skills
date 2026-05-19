@@ -20,7 +20,7 @@ The query is a `bool` with `should` clauses across multiple fields, each with it
 
 | Field | Boost | Notes |
 |---|---|---|
-| `slug` | ×5 | `most_fields` match. Whole-token match strongest. Compound slugs (e.g. `foogallery`) get partial credit via engram. |
+| `slug` | ×5 | `most_fields` match. Whole-token match strongest. Compound slugs (e.g. `wpforms-lite` for "forms") get partial credit via engram. |
 | `title` | ×5 | `most_fields`, shared with slug |
 | `title.engram` | ×2 | Edge n-gram analyzer. Title-leading position helps. |
 | `excerpt` (short description) | ×2 | `best_fields` |

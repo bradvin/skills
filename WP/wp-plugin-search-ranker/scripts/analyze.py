@@ -7,7 +7,7 @@ term frequencies across title/excerpt/description/tags, and outputs a
 structured comparison.
 
 Usage:
-    python3 analyze.py --term "lightbox" --user-slug foobox-image-lightbox \\
+    python3 analyze.py --term "page builder" --user-slug elementor \\
         --serp /tmp/serp.json --readmes-dir /tmp/readmes
 """
 
@@ -142,7 +142,7 @@ def slug_clean_token(slug, term):
 
 
 def slug_substring(slug, term):
-    """True if term appears as a substring (e.g. 'gallery' inside 'foogallery')."""
+    """True if term appears as a substring (e.g. 'forms' inside 'wpforms')."""
     return term.lower() in slug.lower()
 
 

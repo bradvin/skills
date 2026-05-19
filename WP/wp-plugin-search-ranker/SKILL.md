@@ -10,7 +10,7 @@ This skill diagnoses why a plugin ranks where it does on the WP.org directory se
 ## When this triggers vs when it doesn't
 
 - ✅ "Why is my plugin #11 for 'lightbox'?"
-- ✅ "How do I outrank Modula for 'gallery'?"
+- ✅ "How do I outrank Elementor for 'page builder'?"
 - ✅ "Audit my plugin titled X against the term Y"
 - ❌ "How do I rank my plugin's marketing site on Google?" — that's a different problem; tell the user this skill is for WP.org directory search, not Google.
 
@@ -18,7 +18,7 @@ This skill diagnoses why a plugin ranks where it does on the WP.org directory se
 
 You need two things from the user. Ask only for what's missing:
 1. **Search term** (e.g. "gallery", "lightbox", "popup")
-2. **Plugin slug or name** (e.g. `foogallery`, `foobox-image-lightbox`)
+2. **Plugin slug or name** (e.g. `elementor`, `woocommerce`, `contact-form-7`)
 
 If they give a plugin name but not a slug, search the API and confirm the match before proceeding.
 
@@ -57,14 +57,14 @@ for slug in <top3-slugs> <user-slug>; do
 done
 ```
 
-Some plugins (FooGallery is one) use uppercase `README.txt`. Check the file size — if it returned a 404 HTML page (< 500 bytes), retry with `README.txt`. If that also fails, list the SVN trunk directory to find the actual filename.
+Some plugins use uppercase `README.txt` or another nonstandard readme filename. Check the file size — if it returned a 404 HTML page (< 500 bytes), retry with `README.txt`. If that also fails, list the SVN trunk directory to find the actual filename.
 
 ### Step 3: Run the comparison
 
 Use `scripts/analyze.py` — it parses readmes, runs BM25 saturation math, and outputs a structured comparison. Pass it the term, the user's slug, and the path to the SERP JSON.
 
 ```bash
-python3 /path/to/scripts/analyze.py --term "gallery" --user-slug foogallery --serp /tmp/serp.json --readmes-dir /tmp/readmes
+python3 /path/to/scripts/analyze.py --term "page builder" --user-slug elementor --serp /tmp/serp.json --readmes-dir /tmp/readmes
 ```
 
 This gives you the raw data you'll reason from. Don't dump the script output verbatim — use it to inform your recommendations.
@@ -132,7 +132,7 @@ Use markdown sparingly: headers, one comparison table, and prose. No bullet-poin
 
 **Multi-word search terms.** The algorithm tokenizes and scores each term independently then combines — so for "image gallery" you're looking at how each plugin scores on "image" AND on "gallery", with phrase bonuses for adjacency in title.engram. Run the analysis for both terms separately if useful.
 
-**The plugin slug is a compound word containing the term.** E.g. `foogallery` for "gallery". The Elasticsearch n-gram/edge-ngram analyzer partially recovers credit for this — it's not zero, but it's not the full clean-token ×5 boost either. Note this in your analysis.
+**The plugin slug is a compound word containing the term.** E.g. `wpforms-lite` for "forms". The Elasticsearch n-gram/edge-ngram analyzer partially recovers credit for this — it's not zero, but it's not the full clean-token ×5 boost either. Note this in your analysis.
 
 **Different SERP for same term page 1 vs API call.** WP.org caches search results behind a CDN; the API and the user-facing UI sometimes diverge by 12–48 hours after content changes. Trust what the user sees in the live UI.
 

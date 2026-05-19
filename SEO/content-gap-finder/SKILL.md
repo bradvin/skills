@@ -1,12 +1,12 @@
 ---
 name: content-gap-finder
 description: >
-  Analyze a fooplugins.com page's GSC query data to find content gaps and new page opportunities.
+  Analyze a website page's GSC query data to find content gaps and new page opportunities.
   Use this skill whenever the user says things like "find content gaps", "what should I add to this page",
   "content gap analysis", "what new pages should I create", "analyze queries for [url]", "daily content task",
   "run the content gap finder", "content opportunities", "what are people searching for on this page",
   "what queries am I missing", "gap analysis", or "expand this page". Also trigger when the user pastes
-  a fooplugins.com URL and asks what content to add, or asks "what should I write about next" or
+  a URL for a verified site and asks what content to add, or asks "what should I write about next" or
   "pick a page to improve". If no URL is given, the skill auto-picks the best candidate page.
   This skill combines GSC query data, live page scraping, and DataForSEO keyword enrichment to produce
   an HTML report with concrete content section suggestions and new page ideas.
@@ -14,11 +14,11 @@ description: >
 
 # Content Gap Finder
 
-Analyzes a fooplugins.com page by comparing its actual content against the GSC queries driving impressions to it. Identifies content sections to add and new standalone pages to create. Outputs a styled HTML report.
+Analyzes a website page by comparing its actual content against the GSC queries driving impressions to it. Identifies content sections to add and new standalone pages to create. Outputs a styled HTML report.
 
 ## Defaults
 
-- **GSC site URL**: `https://fooplugins.com/`
+- **GSC site URL**: The verified property for the submitted site, inferred from the URL when possible or supplied by the user.
 - **Audit history file**: `/home/claude/content-gap-audits.json`
 - **Report output**: `/mnt/user-data/outputs/content-gap-report.html`
 
@@ -34,10 +34,10 @@ Analyzes a fooplugins.com page by comparing its actual content against the GSC q
 2. Query GSC for the top 50 pages by clicks over the last 90 days:
    - `gsc_query_search_analytics` with dimensions `["page"]`, row_limit 50, date range = last 90 days
 3. Filter out pages that were audited in the last 30 days (check audit history)
-4. Filter out non-content pages (anything matching `/cart`, `/checkout`, `/my-account`, `/wp-admin`, `/wp-login`, `/feed`, or the bare homepage `https://fooplugins.com/` itself unless no other candidates exist)
+4. Filter out non-content pages (anything matching `/cart`, `/checkout`, `/my-account`, `/wp-admin`, `/wp-login`, `/feed`, or the site's bare homepage itself unless no other candidates exist)
 5. Pick the top remaining page by clicks — this is the page doing well enough to be worth investing in, but hasn't been audited recently
 
-Tell the user which page was selected and why (e.g., "Auto-picked /foogallery/wordpress-image-gallery/ — 342 clicks in the last 90 days, last audited 45 days ago").
+Tell the user which page was selected and why (e.g., "Auto-picked /blog/product-category-guide/ — 342 clicks in the last 90 days, last audited 45 days ago").
 
 ### Step 2: Pull GSC query data for the page
 
@@ -121,7 +121,7 @@ Append an entry to `/home/claude/content-gap-audits.json`:
 
 ```json
 {
-  "url": "https://fooplugins.com/the-page/",
+  "url": "https://example.com/the-page/",
   "date": "2026-03-15",
   "sections_suggested": 5,
   "new_pages_suggested": 3,

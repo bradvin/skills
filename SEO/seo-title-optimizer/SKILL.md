@@ -39,7 +39,7 @@ Fetch the URL the user provided. Extract:
 
 ### 1b. GSC: query performance for this URL
 Use `gsc_query_search_analytics` with:
-- `site_url`: `https://fooplugins.com/`
+- `site_url`: the verified GSC property for the submitted URL, such as `https://example.com/`
 - `dimensions`: `["query"]`
 - `dimension_filter_groups`: filter to the exact URL
 - `start_date`: 30 days ago, `end_date`: yesterday
@@ -49,7 +49,7 @@ Collect: query, clicks, impressions, CTR, position for each query.
 
 ### 1c. DataForSEO: ranked keywords for the page
 Use `dataforseo_labs_google_ranked_keywords` with:
-- `target`: the full URL (e.g. `https://fooplugins.com/how-to-sell-photos-online/`)
+- `target`: the full URL (e.g. `https://example.com/how-to-sell-photos-online/`)
 - `location_name`: `United States`
 - `language_code`: `en`
 - `limit`: 50

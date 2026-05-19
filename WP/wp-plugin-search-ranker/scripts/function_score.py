@@ -6,7 +6,7 @@ Useful for: "if this plugin has better quality signals than competitors above it
 the gap is in text relevance, not function score."
 
 Usage:
-    python3 function_score.py --serp /tmp/serp.json --user-slug foogallery [--top-n 10]
+    python3 function_score.py --serp /tmp/serp.json --user-slug elementor [--top-n 10]
 """
 
 import argparse
