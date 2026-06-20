@@ -1,6 +1,6 @@
 # Skills
 
-A collection of agent skills for SEO analysis, topical authority planning, marketing conversion review, X/social post drafting, frontend/UI guidance, and WordPress.org plugin search ranking work.
+A collection of agent skills for SEO analysis, topical authority planning, marketing conversion review, X/social post drafting, frontend/UI guidance, Hermes skill packaging, and WordPress.org plugin search ranking work.
 
 Each skill lives in its own directory and is defined by a `SKILL.md` file with frontmatter metadata (`name`, `description`, and optional compatibility/licensing notes) followed by the workflow instructions an agent should follow.
 
@@ -33,6 +33,12 @@ Each skill lives in its own directory and is defined by a `SKILL.md` file with f
 | Skill | Path | Purpose |
 | --- | --- | --- |
 | Compose Viral Skill X Post | [`SOCIAL/compose-viral-skill-x-post/SKILL.md`](./SOCIAL/compose-viral-skill-x-post/SKILL.md) | Turns an AI skill, workflow, prompt, agent setup, automation, pipeline, or tool into a high-engagement X/Twitter post or thread with hook options, breakdown structure, CTA guidance, and an optional infographic prompt. |
+
+### Hermes
+
+| Skill | Path | Purpose |
+| --- | --- | --- |
+| Public Skill Extractor | [`HERMES/public-skill-extractor/SKILL.md`](./HERMES/public-skill-extractor/SKILL.md) | Extracts an installed/private Hermes skill into a privacy-safe public skill, updates existing public copies when the source changes, and guides PR submission for approval. |
 
 ### WordPress
 
