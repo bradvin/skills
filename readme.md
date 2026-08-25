@@ -1,6 +1,6 @@
 # Skills
 
-A collection of agent skills for SEO analysis, topical authority planning, project knowledge bases, newsletter intelligence, marketing conversion review, health/diet meal planning, X/social post drafting, frontend/UI guidance, cofounder-style project interviews, SaaS pre-launch security review, Cloudflare site auditing, WordPress.org plugin search ranking, and WordPress support debugging work.
+A collection of agent skills for SEO analysis, topical authority and YouTube SEO planning, project knowledge bases, newsletter intelligence, marketing conversion review, health/diet meal planning, X/social post drafting, frontend/UI guidance, cofounder-style project interviews, SaaS pre-launch security review, Cloudflare site auditing, WordPress.org plugin search ranking, and WordPress support debugging work.
 
 Each skill lives in its own directory and is defined by a `SKILL.md` file with frontmatter metadata (`name`, `description`, and optional compatibility/licensing notes) followed by the workflow instructions an agent should follow.
 
@@ -15,6 +15,7 @@ Each skill lives in its own directory and is defined by a `SKILL.md` file with f
 | SEO Title Optimizer | [`SEO/seo-title-optimizer/SKILL.md`](./SEO/seo-title-optimizer/SKILL.md) | Uses page scrape, GSC, DataForSEO, live SERP, and optional GA4 data to recommend title tags, H1s, and meta descriptions. |
 | Topical Authority Map Generator | [`SEO/topical-authority-map-generator/SKILL.md`](./SEO/topical-authority-map-generator/SKILL.md) | Builds a hierarchical topical authority map with pillar pages, clusters, supporting pages, an HTML report, and a machine-readable JSON map. |
 | Article E-E-A-T Pruning Audit | [`SEO/article-eeat-pruning-audit/SKILL.md`](./SEO/article-eeat-pruning-audit/SKILL.md) | Audits a single article for helpful-content quality, E-E-A-T/trust signals, freshness, factual risk, and pruning actions: keep, update, merge, redirect, noindex, or delete. |
+| YouTube SEO | [`SEO/youtube-seo/SKILL.md`](./SEO/youtube-seo/SKILL.md) | Plans, publishes, optimizes, and audits search-led videos, companion pages, structured data, distribution, and conversion measurement. |
 
 ### UI
 
