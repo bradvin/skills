@@ -1,9 +1,6 @@
 ---
 name: youtube-seo
-description: >
-  Use for YouTube SEO planning, publishing, and audits. Trigger on video search visibility,
-  titles, thumbnails, descriptions, captions, transcripts, retention, companion pages,
-  VideoObject schema, distribution, or conversion measurement.
+description: "Use when planning, publishing, or auditing YouTube SEO."
 version: 1.0.0
 author: Hermes Agent
 license: MIT
