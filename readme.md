@@ -1,6 +1,6 @@
 # Skills
 
-A collection of agent skills for SEO analysis, topical authority and YouTube SEO planning, project knowledge bases, newsletter intelligence, marketing conversion review, health/diet meal planning, X/social post drafting, frontend/UI guidance, cofounder-style project interviews, SaaS pre-launch security review, Cloudflare site auditing, WordPress.org plugin search ranking, and WordPress support debugging work.
+A collection of agent skills for SEO analysis, topical authority and YouTube SEO planning, project knowledge bases, newsletter intelligence, marketing conversion review, health/diet meal planning, X/social post drafting, frontend/UI guidance, concise executive communication, cofounder-style project interviews, SaaS pre-launch security review, Cloudflare site auditing, WordPress.org plugin search ranking, and WordPress support debugging work.
 
 Each skill lives in its own directory and is defined by a `SKILL.md` file with frontmatter metadata (`name`, `description`, and optional compatibility/licensing notes) followed by the workflow instructions an agent should follow.
 
@@ -54,6 +54,7 @@ Each skill lives in its own directory and is defined by a `SKILL.md` file with f
 | Skill | Path | Purpose |
 | --- | --- | --- |
 | Cofounder Vision Interview | [`OPS/cofounder-vision-interview/SKILL.md`](./OPS/cofounder-vision-interview/SKILL.md) | Runs a candid cofounder-style project vision interview, forces strategic clarity, makes an explicit proceed/validate/park/kill recommendation, and saves synthesized decisions into project docs. |
+| Exec Reply | [`OPS/exec-reply/SKILL.md`](./OPS/exec-reply/SKILL.md) | Turns detailed operational work into a concise, plain-English, decision-first reply for an executive while preserving full agent-to-agent handoffs. |
 
 ### SaaS
 
