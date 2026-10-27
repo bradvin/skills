@@ -1,6 +1,6 @@
 # Skills
 
-A collection of agent skills for SEO analysis, topical authority and YouTube SEO planning, project knowledge bases, newsletter intelligence, marketing conversion review, health/diet meal planning, X/social post drafting, frontend/UI guidance, concise executive communication, cofounder-style project interviews, SaaS pre-launch security review, Cloudflare site auditing, WordPress.org plugin search ranking, and WordPress support debugging work.
+A collection of agent skills for SEO analysis, topical authority and YouTube SEO planning, project knowledge bases, newsletter intelligence, marketing conversion review, health/diet meal planning, X/social post drafting, frontend/UI guidance, concise executive communication, cofounder-style project interviews, SaaS pre-launch security review, five-persona first-user launch QA, Cloudflare site auditing, WordPress.org plugin search ranking, and WordPress support debugging work.
 
 Each skill lives in its own directory and is defined by a `SKILL.md` file with frontmatter metadata (`name`, `description`, and optional compatibility/licensing notes) followed by the workflow instructions an agent should follow.
 
@@ -61,6 +61,7 @@ Each skill lives in its own directory and is defined by a `SKILL.md` file with f
 | Skill | Path | Purpose |
 | --- | --- | --- |
 | SaaS Pre-launch Security Checklist | [`SAAS/saas-prelaunch-security-checklist/SKILL.md`](./SAAS/saas-prelaunch-security-checklist/SKILL.md) | Runs a practical security/privacy readiness gate before launching, dogfooding, beta-testing, or onboarding real users to a SaaS app, with project-specific minimum checks. |
+| First-User Launch QA | [`SAAS/first-user-launch-qa/SKILL.md`](./SAAS/first-user-launch-qa/SKILL.md) | Runs five isolated, real-browser first-success journeys, prioritizes evidenced friction by severity and distinct-persona count, and retests all five after scoped remediation. |
 
 ### DevOps
 
